@@ -109,31 +109,76 @@ const Nav = () => {
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
         >
-          <Link href="#home">Home</Link>
+          <span
+            onClick={() => {
+              window.scrollTo({
+                top: document.getElementById("home").offsetTop,
+                behaviour: "smooth",
+              });
+            }}
+          >
+            Home
+          </span>
         </motion.span>
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
         >
-          <Link href="#skills">Skills</Link>
+          <span
+            onClick={() => {
+              window.scrollTo({
+                top: document.getElementById("skills").offsetTop,
+                behaviour: "smooth",
+              });
+            }}
+          >
+            Skills
+          </span>
         </motion.span>
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
         >
-          <Link href="#projects">Projects</Link>
+          <span
+            onClick={() => {
+              window.scrollTo({
+                top: document.getElementById("projects").offsetTop,
+                behaviour: "smooth",
+              });
+            }}
+          >
+            Projects
+          </span>
         </motion.span>
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
         >
-          <Link href="#about">About</Link>
+          <span
+            onClick={() => {
+              window.scrollTo({
+                top: document.getElementById("about").offsetTop,
+                behaviour: "smooth",
+              });
+            }}
+          >
+            About
+          </span>
         </motion.span>
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
         >
-          <Link href="#contact">Contact</Link>
+          <span
+            onClick={() => {
+              window.scrollTo({
+                top: document.getElementById("contact").offsetTop,
+                behaviour: "smooth",
+              });
+            }}
+          >
+            Contact
+          </span>
         </motion.span>
       </motion.div>
     </div>
