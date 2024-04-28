@@ -24,7 +24,7 @@ const Home = ({ scrollYProgress }) => {
         transition={{ duration: 1 }}
         src="/images/milky.jpg"
         alt=""
-        className="object-cover fixed w-[100%] h-[100%] brightness-[0.5] -z-10"
+        className="object-cover fixed w-[100%] h-[100%] brightness-[0.5]"
       />
       <motion.h1
         initial={{ opacity: 0.25, filter: "blur(10px)", y: 1000, scale: 0.5 }}
