@@ -16,7 +16,7 @@ const Home = ({ scrollYProgress }) => {
   return (
     <div
       id="home"
-      className="h-[100vh] w-[100vw] flex flex-col justify-center items-center relative bg-black -z-20"
+      className="h-[100vh] w-[100vw] flex flex-col justify-center items-center relative bg-transparent"
     >
       <motion.img
         initial={{ opacity: 0 }}
