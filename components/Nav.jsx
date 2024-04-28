@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, stagger } from "framer-motion";
+import { AnimatePresence, motion, stagger, useScroll } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { Alegreya, Allura } from "next/font/google";
@@ -44,7 +44,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="fixed top-0 flex justify-center items-center pt-1 h-fit w-[100%] bg-white-500">
+    <div className="fixed top-0 flex justify-center items-center pt-1 h-fit w-[100%] bg-white-500 z-10">
       {/* Name Component  */}
 
       <motion.div
@@ -108,6 +108,7 @@ const Nav = () => {
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
+          className="cursor-pointer"
         >
           <span
             onClick={() => {
@@ -123,6 +124,7 @@ const Nav = () => {
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
+          className="cursor-pointer"
         >
           <span
             onClick={() => {
@@ -138,6 +140,7 @@ const Nav = () => {
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
+          className="cursor-pointer"
         >
           <span
             onClick={() => {
@@ -153,6 +156,7 @@ const Nav = () => {
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
+          className="cursor-pointer"
         >
           <span
             onClick={() => {
@@ -168,6 +172,7 @@ const Nav = () => {
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
+          className="cursor-pointer"
         >
           <span
             onClick={() => {

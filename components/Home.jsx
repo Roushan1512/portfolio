@@ -1,31 +1,82 @@
-import { Exo_2 } from "next/font/google";
-import React from "react";
+import { motion, useMotionValueEvent, useTransform } from "framer-motion";
+import { Mouse } from "lucide-react";
+import { Exo_2, Alegreya } from "next/font/google";
+import React, { useEffect } from "react";
 
 const garamond = Exo_2({ subsets: ["latin"] });
+const alegreya = Alegreya({ subsets: ["latin"] });
 
-const Home = () => {
+const Home = ({ scrollYProgress }) => {
+  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 5000]);
+  const YprogN = useTransform(scrollYProgress, [0, 1], [0, -5000]);
+  const Yopac = useTransform(scrollYProgress, [0, 1], [1, -30]);
+  useMotionValueEvent(Yopac, "change", (progress) => {
+    console.log(progress);
+  });
   return (
     <div
       id="home"
-      className="h-[100vh] w-[100vw] flex flex-col justify-center items-center relative -z-10"
+      className="h-[100vh] w-[100vw] flex flex-col justify-center items-center relative bg-black"
     >
-      <img
+      <motion.img
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         src="/images/milky.jpg"
         alt=""
-        className="object-cover block absolute w-[100%] h-[100%] -z-10 brightness-[0.5]"
+        className="object-cover absolute w-[100%] h-[100%] brightness-[0.5]"
       />
-      <h1
-        className={`text-[100px]  bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-orange-400 to-amber-200 font-semibold text-center ${garamond.className}`}
+      <motion.h1
+        animate={{
+          opacity: [0.25, 0.25, 1],
+          filter: ["blur(10px)", "blur(10px)", "blur(0px)"],
+          y: [1000, 0, 0],
+          scale: [0.5, 0.5, 1],
+        }}
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+        }}
+        style={{ x: Yprog }}
+        className={`text-[100px] z-10 text-orange-300 font-semibold ${garamond.className}`}
       >
         Roushan Poddar
-      </h1>
+      </motion.h1>
 
-      <p
-        className={`text-5xl font-light text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-amber-200 to-orange-400 ${garamond.className}`}
+      <motion.h3
+        animate={{
+          opacity: [0.25, 0.25, 1],
+          filter: ["blur(10px)", "blur(10px)", "blur(0px)"],
+          y: [1000, 0, 0],
+          scale: [0.5, 0.5, 1],
+        }}
+        transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
+        style={{ x: YprogN }}
+        className={`text-5xl z-10 font-medium text-orange-100 to-orange-400 ${garamond.className}`}
       >
         Full Stack Developer
-      </p>
-      {/* <span className="h-32" /> */}
+      </motion.h3>
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 3 }}
+        style={{ opacity: Yopac }}
+        className="absolute bottom-6 right-6 flex justify-center items-center z-10 text-white gap-2 text-sm"
+      >
+        <Mouse size={24} />
+        More to Explore
+      </motion.span>
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 3 }}
+        style={{ opacity: Yopac }}
+        className={`absolute bottom-6 left-6 flex justify-center items-center z-10 text-white gap-2 text-lg font-extralight ${alegreya.className}`}
+      >
+        Building the Web . . .
+        <br />
+        From Pixels to Connections
+      </motion.span>
     </div>
   );
 };

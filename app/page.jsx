@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -9,9 +9,15 @@ import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 
 const page = () => {
+  const { scrollYProgress } = useScroll();
+
+  // useMotionValueEvent(scrollYProgress, "change", (progress) => {
+  //   console.log(progress);
+  // });
+
   return (
     <div>
-      <Home />
+      <Home scrollYProgress={scrollYProgress} />
       <Skills />
       <Projects />
       <About />
