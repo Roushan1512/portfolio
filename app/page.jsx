@@ -18,9 +18,9 @@ const Mainpage = () => {
   return (
     <div>
       <Home scrollYProgress={scrollYProgress} />
-      <Skills />
-      <Projects />
+      <Projects scrollYProgress={scrollYProgress} />
       <About />
+      <Skills />
       <Contact />
     </div>
   );

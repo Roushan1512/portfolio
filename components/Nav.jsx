@@ -129,22 +129,6 @@ const Nav = () => {
           <span
             onClick={() => {
               window.scrollTo({
-                top: document.getElementById("skills").offsetTop,
-                behaviour: "smooth",
-              });
-            }}
-          >
-            Skills
-          </span>
-        </motion.span>
-        <motion.span
-          variants={innerVariants}
-          transition={{ type: "spring", bounce: 0.25 }}
-          className="cursor-pointer"
-        >
-          <span
-            onClick={() => {
-              window.scrollTo({
                 top: document.getElementById("projects").offsetTop,
                 behaviour: "smooth",
               });
@@ -167,6 +151,22 @@ const Nav = () => {
             }}
           >
             About
+          </span>
+        </motion.span>
+        <motion.span
+          variants={innerVariants}
+          transition={{ type: "spring", bounce: 0.25 }}
+          className="cursor-pointer"
+        >
+          <span
+            onClick={() => {
+              window.scrollTo({
+                top: document.getElementById("skills").offsetTop,
+                behaviour: "smooth",
+              });
+            }}
+          >
+            Skills
           </span>
         </motion.span>
         <motion.span
