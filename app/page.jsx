@@ -8,7 +8,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 
-const page = () => {
+const Mainpage = () => {
   const { scrollYProgress } = useScroll();
 
   // useMotionValueEvent(scrollYProgress, "change", (progress) => {
@@ -26,4 +26,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Mainpage;
