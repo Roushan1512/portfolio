@@ -7,12 +7,17 @@ const garamond = Exo_2({ subsets: ["latin"] });
 const alegreya = Alegreya({ subsets: ["latin"] });
 
 const Home = ({ scrollYProgress }) => {
+  const [img, setImg] = React.useState("visible");
   const Yprog = useTransform(scrollYProgress, [0, 1], [0, 5000]);
   const YprogN = useTransform(scrollYProgress, [0, 1], [0, -5000]);
   const Yopac = useTransform(scrollYProgress, [0, 1], [1, -30]);
-  // useMotionValueEvent(Yopac, "change", (progress) => {
-  //   console.log(progress);
-  // });
+  useMotionValueEvent(scrollYProgress, "change", (progress) => {
+    if (progress > 0.125) {
+      setImg("hidden");
+    } else {
+      setImg("visible");
+    }
+  });
   return (
     <div
       id="home"
@@ -24,7 +29,7 @@ const Home = ({ scrollYProgress }) => {
         transition={{ duration: 1 }}
         src="/images/milky.jpg"
         alt=""
-        className="object-cover fixed w-[100%] h-[100%] brightness-[0.5]"
+        className={`object-cover fixed w-[100%] h-[100%] brightness-[0.5] ${img} `}
       />
       <motion.h1
         initial={{ opacity: 0.25, filter: "blur(10px)", y: 1000, scale: 0.5 }}
