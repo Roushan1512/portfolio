@@ -71,7 +71,7 @@ const About = () => {
             <span className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-100">
               Roushan
             </span>
-            <p className="text-white text-[15px] w-[28%] font-light leading-4 pt-4 bg-[#0000000a] p-2 rounded-xl">
+            <p className="text-white text-[15px] w-[28%] font-light leading-4 pt-4 p-2">
               A web developer with a knack for solving complex problems with
               creative code. {"I'm"} particularly excited about Backend
               Frameworks and {"I'm"} confident my experience in using Frontend
