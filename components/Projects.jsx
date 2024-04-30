@@ -218,8 +218,8 @@ const Projects = () => {
             className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin`}
           >
             As the name suggests, this website is a side hustle I made inspired
-            by the reddit community. It is a simple forum where users can share
-            new ideas and discuss them with other users.
+            by the reddit community. It is a simple forum where all users can
+            share new ideas and discuss them with other users.
           </p>
           <motion.span
             className="absolute bottom-0 right-0 text-white cursor-pointer"
