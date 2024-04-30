@@ -207,7 +207,7 @@ const Projects = () => {
         <img
           src="/images/reddit.png"
           className="h-[35vh] w-[35vw] rounded-md ml-[5vw]"
-        ></img>
+        />
         <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
           <h1
             className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4`}
