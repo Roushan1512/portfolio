@@ -267,7 +267,7 @@ const Projects = () => {
             creates recipes based on those.
           </p>
           <motion.span
-            className="absolute bottom-0 right-12 text-white cursor-pointer"
+            className="absolute bottom-0 right-0 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
