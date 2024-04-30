@@ -256,15 +256,15 @@ const Projects = () => {
           <h1
             className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4`}
           >
-            Cook's Book
+            Cook{"'"}s Book
           </h1>
           <p
             className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin`}
           >
-            Cook's Book is a recipe generator with a twist. Unlike traditional
-            recipe sites, it doesn't require a specific shopping list. Instead,
-            you tell Cook's Book your ingredients, and it creates recipes based
-            on those.
+            Cook{"'"}s Book is a recipe generator with a twist. Unlike
+            traditional recipe sites, it doesn{"'"}t require a specific shopping
+            list. Instead, you tell Cook{"'"}s Book your ingredients, and it
+            creates recipes based on those.
           </p>
           <motion.span
             className="absolute bottom-0 right-12 text-white cursor-pointer"
