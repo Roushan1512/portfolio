@@ -33,9 +33,9 @@ const Projects = () => {
   const cookbook = useTransform(Yprog, [730, 810], [1, -1]);
   const robinfood = useTransform(Yprog, [870, 950], [1, -1]);
 
-  useMotionValueEvent(cypher, "change", (progress) => {
-    console.log(progress);
-  });
+  // useMotionValueEvent(cypher, "change", (progress) => {
+  //   console.log(progress);
+  // });
 
   return (
     <div

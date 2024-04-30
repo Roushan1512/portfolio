@@ -10,7 +10,6 @@ import Skills from "@/components/Skills";
 
 const Mainpage = () => {
   const { scrollYProgress } = useScroll();
-
   // useMotionValueEvent(scrollYProgress, "change", (progress) => {
   //   console.log(progress);
   // });
