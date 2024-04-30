@@ -12,7 +12,7 @@ const Home = ({ scrollYProgress }) => {
   const YprogN = useTransform(scrollYProgress, [0, 1], [0, -5000]);
   const Yopac = useTransform(scrollYProgress, [0, 1], [1, -30]);
   useMotionValueEvent(scrollYProgress, "change", (progress) => {
-    if (progress > 0.125) {
+    if (progress > 0.25) {
       setImg("hidden");
     } else {
       setImg("visible");
@@ -58,7 +58,7 @@ const Home = ({ scrollYProgress }) => {
           y: [1000, 0, 0],
           scale: [0.5, 0.5, 1],
         }}
-        transition={{ duration: 2, ease: "easeInOut", delay: 2 }}
+        transition={{ duration: 2.5, ease: "easeInOut", delay: 2 }}
         style={{ x: YprogN }}
         className={`text-5xl z-10 font-medium text-orange-100 to-orange-400 ${garamond.className}`}
       >

@@ -129,7 +129,9 @@ const Nav = () => {
           <span
             onClick={() => {
               window.scrollTo({
-                top: document.getElementById("projects").offsetTop,
+                top:
+                  document.getElementById("projects").offsetTop +
+                  window.innerHeight * 1.3,
                 behaviour: "smooth",
               });
             }}
@@ -150,7 +152,7 @@ const Nav = () => {
               });
             }}
           >
-            About
+            About Me
           </span>
         </motion.span>
         <motion.span
