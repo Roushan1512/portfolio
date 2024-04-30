@@ -8,8 +8,8 @@ const alegreya = Alegreya({ subsets: ["latin"] });
 
 const Home = ({ scrollYProgress }) => {
   const [img, setImg] = React.useState("visible");
-  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 5000]);
-  const YprogN = useTransform(scrollYProgress, [0, 1], [0, -5000]);
+  const Yprog = useTransform(scrollYProgress, [0, 0.25], [0, 5000]);
+  const YprogN = useTransform(scrollYProgress, [0, 0.25], [0, -5000]);
   const Yopac = useTransform(scrollYProgress, [0, 1], [1, -30]);
   useMotionValueEvent(scrollYProgress, "change", (progress) => {
     if (progress > 0.25) {

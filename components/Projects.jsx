@@ -24,17 +24,18 @@ const Projects = () => {
   });
 
   const Yprog = useTransform(scrollYProgress, [0, 1], [0, 1000]);
-  const cypher = useTransform(Yprog, [220, 300], [0, 1500]);
-  const agrico = useTransform(Yprog, [390, 470], [0, -1500]);
-  const reddit = useTransform(Yprog, [560, 640], [0, 1500]);
-  const cookbook = useTransform(Yprog, [730, 810], [0, -1500]);
-  const robinfood = useTransform(Yprog, [850, 930], [0, 1500]);
   const bar = useTransform(Yprog, [105, 1000], [0, 45]);
   const headopac = useTransform(Yprog, [950, 1000], [1, -0]);
 
-  // useMotionValueEvent(Yprog, "change", (progress) => {
-  //   console.log(progress);
-  // });
+  const cypher = useTransform(Yprog, [220, 300], [1, -1]);
+  const agrico = useTransform(Yprog, [390, 470], [1, -1]);
+  const reddit = useTransform(Yprog, [560, 640], [1, -1]);
+  const cookbook = useTransform(Yprog, [730, 810], [1, -1]);
+  const robinfood = useTransform(Yprog, [870, 950], [1, -1]);
+
+  useMotionValueEvent(cypher, "change", (progress) => {
+    console.log(progress);
+  });
 
   return (
     <div
@@ -64,7 +65,7 @@ const Projects = () => {
       {/* CYPHER */}
 
       <motion.div
-        style={{ x: cypher }}
+        style={{ opacity: cypher }}
         className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#31032f3d] rounded-[20px] border-[1px] border-white"
       >
         <video
@@ -143,7 +144,7 @@ const Projects = () => {
       {/* AGRICO */}
 
       <motion.div
-        style={{ x: agrico }}
+        style={{ opacity: agrico }}
         className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#3f3e063d] rounded-[20px] border-[1px] border-white"
       >
         <video
@@ -201,7 +202,7 @@ const Projects = () => {
       {/* REDDIT */}
 
       <motion.div
-        style={{ x: reddit }}
+        style={{ opacity: reddit }}
         className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#ffae0025] rounded-[20px] border-[1px] border-white"
       >
         <img
@@ -243,7 +244,7 @@ const Projects = () => {
       {/* COOKBOOK */}
 
       <motion.div
-        style={{ x: cookbook }}
+        style={{ opacity: cookbook }}
         className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#2b23033d] rounded-[20px] border-[1px] border-white"
       >
         <video
@@ -285,7 +286,7 @@ const Projects = () => {
       {/* ROBINFOOD  */}
 
       <motion.div
-        style={{ x: robinfood }}
+        style={{ opacity: robinfood }}
         className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#0779112c] rounded-[20px] border-[1px] border-white"
       >
         <video
