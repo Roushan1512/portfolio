@@ -73,9 +73,9 @@ const About = () => {
             </span>
             <p className="text-white text-[15px] w-[28%] font-light leading-4 pt-4 bg-[#0000000a] p-2 rounded-xl">
               A web developer with a knack for solving complex problems with
-              creative code. I'm particularly excited about Backend Frameworks
-              and I'm confident my experience in using Frontend frameworks like
-              ReactJs and Tailwind Css.
+              creative code. {"I'm"} particularly excited about Backend
+              Frameworks and {"I'm"} confident my experience in using Frontend
+              frameworks like ReactJs and Tailwind Css.
             </p>
           </motion.span>
         </div>
