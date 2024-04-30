@@ -17,10 +17,9 @@ const Mainpage = () => {
   return (
     <div>
       <Home scrollYProgress={scrollYProgress} />
-      <Projects scrollYProgress={scrollYProgress} />
+      <Projects />
       <About />
       <Skills />
-      <Contact />
     </div>
   );
 };

@@ -1,8 +1,14 @@
 "use client";
 
-import { AnimatePresence, motion, stagger, useScroll } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  stagger,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Alegreya, Allura } from "next/font/google";
 
 const alegreya = Alegreya({ subsets: ["latin"] });
@@ -43,12 +49,23 @@ const Nav = () => {
     visible: { x: 0 },
   };
 
+  const [homehover, setHomehover] = useState(false);
+  const [projects, setProjects] = useState(false);
+  const [about, setAbout] = useState(false);
+  const [skills, setSkills] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", (i) => {
+    console.log(i);
+  });
+
   return (
     <div className="fixed top-0 flex justify-center items-center pt-1 h-fit w-[100%] bg-white-500 z-10">
       {/* Name Component  */}
 
       <motion.div
-        className={`flex justify-start items-center h-fit py-2 px-16 w-[50%] ${allura.className} text-white text-5xl`}
+        className={`flex justify-start items-center h-fit py-2 px-16 w-[50%] ${allura.className} text-white text-5xl cursor-pointer`}
         variants={outerNameVariants}
         initial="hidden"
         animate="visible"
@@ -108,7 +125,9 @@ const Nav = () => {
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
-          className="cursor-pointer"
+          className="cursor-pointer relative"
+          onHoverStart={() => setHomehover(true)}
+          onHoverEnd={() => setHomehover(false)}
         >
           <span
             onClick={() => {
@@ -120,11 +139,19 @@ const Nav = () => {
           >
             Home
           </span>
+          <motion.span
+            className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: homehover ? 1 : 0 }}
+            style={{ originX: 0 }}
+          />
         </motion.span>
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
-          className="cursor-pointer"
+          className="cursor-pointer relative"
+          onHoverStart={() => setProjects(true)}
+          onHoverEnd={() => setProjects(false)}
         >
           <span
             onClick={() => {
@@ -138,27 +165,45 @@ const Nav = () => {
           >
             Projects
           </span>
+          <motion.span
+            className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: projects ? 1 : 0 }}
+            style={{ originX: 0 }}
+          />
         </motion.span>
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
-          className="cursor-pointer"
+          className="cursor-pointer relative"
+          onHoverStart={() => setAbout(true)}
+          onHoverEnd={() => setAbout(false)}
         >
           <span
             onClick={() => {
               window.scrollTo({
-                top: document.getElementById("about").offsetTop,
+                top:
+                  document.getElementById("about").offsetTop +
+                  window.innerHeight * 2.55,
                 behaviour: "smooth",
               });
             }}
           >
             About Me
           </span>
+          <motion.span
+            className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: about ? 1 : 0 }}
+            style={{ originX: 0 }}
+          />
         </motion.span>
         <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
-          className="cursor-pointer"
+          className="cursor-pointer relative"
+          onHoverStart={() => setSkills(true)}
+          onHoverEnd={() => setSkills(false)}
         >
           <span
             onClick={() => {
@@ -170,8 +215,14 @@ const Nav = () => {
           >
             Skills
           </span>
+          <motion.span
+            className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: skills ? 1 : 0 }}
+            style={{ originX: 0 }}
+          />
         </motion.span>
-        <motion.span
+        {/* <motion.span
           variants={innerVariants}
           transition={{ type: "spring", bounce: 0.25 }}
           className="cursor-pointer"
@@ -186,7 +237,7 @@ const Nav = () => {
           >
             Contact
           </span>
-        </motion.span>
+        </motion.span> */}
       </motion.div>
     </div>
   );
