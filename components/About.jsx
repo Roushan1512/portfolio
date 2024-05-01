@@ -108,53 +108,61 @@ const About = () => {
             variants={outerIcons}
             initial="hidden"
             animate={text ? "visible" : "hidden"}
-            className="absolute bottom-20 left-48 flex justify-center items-center gap-6 h-fit w-fit [transform:translate(-50%,-50%)]"
+            className="absolute bottom-20 left-48 flex justify-center items-center gap-5 h-fit w-fit [transform:translate(-50%,-50%)]"
           >
             <motion.span
               variants={innerIcons}
               className="h-fit w-fit aspect-square"
-              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+              whileHover={{ scale: 1.5, marginLeft: 10, marginRight: 10 }}
             >
-              <Instagram
-                size={40}
-                strokeWidth={1.25}
-                className="text-white bg-gradient-to-bl from-[#470175] via-[#96109b] to-[#a34608] rounded-xl p-[2px]"
-              />
+              <a href="https://www.instagram.com/roushan_p.15?igsh=NGh6bGZ5eXNlOXBk">
+                <Instagram
+                  size={40}
+                  strokeWidth={1.75}
+                  className="text-white bg-gradient-to-bl from-[#470175] via-[#96109b] to-[#a34608] rounded-xl p-[2px]"
+                />
+              </a>
             </motion.span>
             <motion.span
               variants={innerIcons}
               className="h-fit w-fit aspect-square"
-              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+              whileHover={{ scale: 1.5, marginLeft: 10, marginRight: 10 }}
             >
-              <Github
-                size={40}
-                strokeWidth={1.5}
-                className="rounded-full bg-black text-white p-1"
-              />
+              <a href="https://github.com/Roushan1512">
+                <Github
+                  size={40}
+                  strokeWidth={1.5}
+                  className="rounded-full bg-black text-white p-1"
+                />
+              </a>
             </motion.span>
             <motion.span
               variants={innerIcons}
               className="h-fit w-fit aspect-square"
-              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+              whileHover={{ scale: 1.5, marginLeft: 10, marginRight: 10 }}
             >
-              <Linkedin
-                size={40}
-                strokeWidth={1}
-                fill="white"
-                className="bg-blue-600 text-white p-1 rounded-xl"
-              />
+              <a href="https://www.linkedin.com/in/roushan-poddar-8531a327a/">
+                <Linkedin
+                  size={40}
+                  strokeWidth={0.25}
+                  fill="white"
+                  className="bg-blue-600 text-white p-1 rounded-xl"
+                />
+              </a>
             </motion.span>
             <motion.span
               variants={innerIcons}
               className="h-fit w-fit aspect-square"
-              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+              whileHover={{ scale: 1.5, marginLeft: 10, marginRight: 10 }}
             >
-              <Mail
-                size={40}
-                strokeWidth={1.5}
-                fill="#d8d8d8"
-                className="text-red-600 bg-white rounded-lg p-1"
-              />
+              <a href="mailto:roushanp2003@gmail.com">
+                <Mail
+                  size={40}
+                  strokeWidth={1.5}
+                  fill="#c9c9c9"
+                  className="text-red-600 bg-white rounded-lg p-1"
+                />
+              </a>
             </motion.span>
           </motion.div>
         </div>

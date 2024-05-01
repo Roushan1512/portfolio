@@ -54,7 +54,7 @@ const Projects = () => {
         className="sticky top-16 flex flex-col justify-start items-center h-[50vh]"
       >
         <h1 className={`text-white text-5xl ${alegreya.className}`}>
-          Projects
+          - Projects -
         </h1>
         <motion.span
           style={{ scaleX: bar }}
@@ -93,7 +93,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
             onHoverStart={() => setOpac(1)}
@@ -114,7 +114,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
           >
@@ -130,7 +130,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
           >
@@ -172,7 +172,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
           >
@@ -188,7 +188,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
           >
@@ -227,7 +227,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
           >
@@ -272,7 +272,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
           >
@@ -315,7 +315,7 @@ const Projects = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
               rotate: [20, -20, 0],
-              scale: [1, 1.1, 1.2],
+              scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
           >
