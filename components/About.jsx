@@ -6,7 +6,10 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import Image from "next/image";
 import React, { useRef, useState } from "react";
+import Pic4 from "@/public/images/MyPic4.jpg";
+import { Instagram, Github, Mail, Linkedin } from "lucide-react";
 
 const About = () => {
   const container = useRef(null);
@@ -15,7 +18,7 @@ const About = () => {
     offset: ["start start", "end end"],
   });
 
-  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 500]);
   const scalePic = useTransform(Yprog, [25, 250], [0.5, 5]);
   const opacityPic = useTransform(Yprog, [25, 250], [0, 1]);
 
@@ -29,6 +32,24 @@ const About = () => {
     }
     //console.log(i);
   });
+
+  const outerIcons = {
+    hidden: {
+      opacity: 1,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.25,
+        delayChildren: 0.25,
+      },
+    },
+  };
+
+  const innerIcons = {
+    hidden: { y: 100 },
+    visible: { y: 0 },
+  };
 
   const head = {
     hidden: {
@@ -47,7 +68,7 @@ const About = () => {
     <div
       ref={container}
       id="about"
-      className="h-[600vh] w-[100vw] bg-black relative"
+      className="h-[500vh] w-[100vw] bg-black relative"
     >
       <div className="sticky top-[11vh] flex justify-center items-center h-[100vh] w-[100vw]">
         <div className="relative h-[100vh] w-[100vw] flex justify-center items-center">
@@ -58,13 +79,19 @@ const About = () => {
               opacity: opacityPic,
             }}
           >
-            <img src="/images/MyPic4.jpg" className="object-contain" />
+            <Image
+              src={Pic4}
+              alt="Photo"
+              fill="responsive"
+              placeholder="blur"
+              className="object-cover rounded-sm"
+            />
           </motion.div>
           <motion.span
             variants={head}
             initial="hidden"
             animate={text ? "visible" : "hidden"}
-            className="text-3xl absolute top-20 left-20 font-semibold text-amber-100"
+            className="text-3xl absolute top-12 left-20 font-semibold text-amber-100"
           >
             {"   "}
             Hi there! I{"'"}m <br />
@@ -72,12 +99,65 @@ const About = () => {
               Roushan
             </span>
             <p className="text-white text-[15px] w-[28%] font-light leading-4 pt-4 p-2">
-              A web developer with a knack for solving complex problems with
-              creative code. {"I'm"} particularly excited about Backend
-              Frameworks and {"I'm"} confident my experience in using Frontend
-              frameworks like ReactJs and Tailwind Css.
+              A web developer with a knack for solving problems with creative
+              code. {"I'm"} particularly excited in Backend Frameworks and{" "}
+              {"I'm"} confident my experience in using Frontend frameworks like
+              ReactJs and Tailwind Css.
             </p>
           </motion.span>
+          <motion.div
+            variants={outerIcons}
+            initial="hidden"
+            animate={text ? "visible" : "hidden"}
+            className="absolute bottom-20 left-48 flex justify-center items-center gap-6 h-fit w-fit [transform:translate(-50%,-50%)]"
+          >
+            <motion.span
+              variants={innerIcons}
+              className="h-fit w-fit aspect-square"
+              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+            >
+              <Instagram
+                size={40}
+                strokeWidth={1.25}
+                className="text-white bg-gradient-to-bl from-[#470175] via-[#96109b] to-[#a34608] rounded-xl p-[2px]"
+              />
+            </motion.span>
+            <motion.span
+              variants={innerIcons}
+              className="h-fit w-fit aspect-square"
+              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+            >
+              <Github
+                size={40}
+                strokeWidth={1.5}
+                className="rounded-full bg-black text-white p-1"
+              />
+            </motion.span>
+            <motion.span
+              variants={innerIcons}
+              className="h-fit w-fit aspect-square"
+              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+            >
+              <Linkedin
+                size={40}
+                strokeWidth={1}
+                fill="white"
+                className="bg-blue-600 text-white p-1 rounded-xl"
+              />
+            </motion.span>
+            <motion.span
+              variants={innerIcons}
+              className="h-fit w-fit aspect-square"
+              whileHover={{ scale: 1.5, marginLeft: 8, marginRight: 8 }}
+            >
+              <Mail
+                size={40}
+                strokeWidth={1.5}
+                fill="#d8d8d8"
+                className="text-red-600 bg-white rounded-lg p-1"
+              />
+            </motion.span>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -184,7 +184,7 @@ const Nav = () => {
               window.scrollTo({
                 top:
                   document.getElementById("about").offsetTop +
-                  window.innerHeight * 2.55,
+                  window.innerHeight * 2.5,
                 behaviour: "smooth",
               });
             }}
