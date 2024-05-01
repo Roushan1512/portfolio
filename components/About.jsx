@@ -83,7 +83,6 @@ const About = () => {
               src={Pic4}
               alt="Photo"
               fill="responsive"
-              placeholder="blur"
               className="object-cover rounded-sm"
             />
           </motion.div>
