@@ -90,7 +90,7 @@ const About = () => {
             variants={head}
             initial="hidden"
             animate={text ? "visible" : "hidden"}
-            className="text-3xl absolute top-12 left-20 font-semibold text-amber-100"
+            className="text-3xl absolute top-12 left-20 font-semibold text-amber-100 cursor-default"
           >
             {"   "}
             Hi there! I{"'"}m <br />

@@ -53,7 +53,9 @@ const Projects = () => {
         style={{ opacity: headopac }}
         className="sticky top-16 flex flex-col justify-start items-center h-[50vh]"
       >
-        <h1 className={`text-white text-5xl ${alegreya.className}`}>
+        <h1
+          className={`text-white text-5xl ${alegreya.className} cursor-default`}
+        >
           - Projects -
         </h1>
         <motion.span
@@ -76,12 +78,12 @@ const Projects = () => {
         ></video>
         <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4`}
+            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             Cypher
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin`}
+            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
           >
             This payment fraud application employs machine learning algorithms
             to detect suspicious transactions, flagging potential fraudulent
@@ -155,12 +157,12 @@ const Projects = () => {
         ></video>
         <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4`}
+            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             AgriCo
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin`}
+            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
           >
             Agrico is an innovative EdTech platform empowering individuals and
             communities to learn modern farming practices and cultivate
@@ -211,12 +213,12 @@ const Projects = () => {
         />
         <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4`}
+            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             Reddit Rip Off
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin`}
+            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
           >
             As the name suggests, this website is a side hustle I made inspired
             by the reddit community. It is a simple forum where all users can
@@ -255,12 +257,12 @@ const Projects = () => {
         ></video>
         <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4`}
+            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             Cook{"'"}s Book
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin`}
+            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
           >
             Cook{"'"}s Book is a recipe generator with a twist. Unlike
             traditional recipe sites, it doesn{"'"}t require a specific shopping
@@ -297,12 +299,12 @@ const Projects = () => {
         ></video>
         <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4`}
+            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             RobinFood
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin`}
+            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
           >
             RobinFood is a web platform that bridges the gap between restaurants
             with surplus food and NGOs, food banks, dedicated to distributing

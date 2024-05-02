@@ -45,7 +45,7 @@ const Home = ({ scrollYProgress }) => {
           delay: 1,
         }}
         style={{ x: Yprog }}
-        className={`text-[100px] z-10 text-orange-300 font-semibold ${garamond.className}`}
+        className={`text-[100px] z-10 text-orange-300 font-semibold ${garamond.className} cursor-default`}
       >
         Roushan Poddar
       </motion.h1>
@@ -60,7 +60,7 @@ const Home = ({ scrollYProgress }) => {
         }}
         transition={{ duration: 2.5, ease: "easeInOut", delay: 2 }}
         style={{ x: YprogN }}
-        className={`text-5xl z-10 font-medium text-orange-100 to-orange-400 ${garamond.className}`}
+        className={`text-5xl z-10 font-medium text-orange-100 to-orange-400 ${garamond.className} cursor-default`}
       >
         Full Stack Developer
       </motion.h3>
@@ -69,7 +69,7 @@ const Home = ({ scrollYProgress }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 3 }}
         style={{ opacity: Yopac }}
-        className="absolute bottom-6 right-6 flex justify-center items-center z-10 text-white gap-2 text-sm"
+        className="absolute bottom-6 right-6 flex justify-center items-center z-10 text-white gap-2 text-sm cursor-default"
       >
         <Mouse size={24} />
         More to Explore
@@ -79,7 +79,7 @@ const Home = ({ scrollYProgress }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 3 }}
         style={{ opacity: Yopac }}
-        className={`absolute bottom-6 left-6 flex justify-center items-center z-10 text-white gap-2 text-lg font-extralight ${alegreya.className}`}
+        className={`absolute bottom-6 left-6 flex justify-center items-center z-10 text-white gap-2 text-lg font-extralight ${alegreya.className} cursor-default`}
       >
         Building the Web . . .
         <br />
