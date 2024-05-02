@@ -9,16 +9,22 @@ import {
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import Pic4 from "@/public/images/MyPic4.jpg";
-import { Instagram, Github, Mail, Linkedin } from "lucide-react";
+import { Instagram, Github, Mail, Linkedin, ExternalLink } from "lucide-react";
+import { Ruluko, Grenze, Alegreya } from "next/font/google";
+
+const ruluko = Ruluko({ subsets: ["latin"], weight: "400" });
+const grenze = Grenze({ subsets: ["latin"], weight: "600" });
+const alegreya = Alegreya({ subsets: ["latin"] });
 
 const About = () => {
+  const [rhover, setRhover] = useState(false);
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
 
-  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 500]);
+  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 400]);
   const scalePic = useTransform(Yprog, [25, 250], [0.5, 5]);
   const opacityPic = useTransform(Yprog, [25, 250], [0, 1]);
 
@@ -68,7 +74,7 @@ const About = () => {
     <div
       ref={container}
       id="about"
-      className="h-[500vh] w-[100vw] bg-black relative"
+      className="h-[400vh] w-[100vw] bg-black relative"
     >
       <div className="sticky top-[11vh] flex justify-center items-center h-[100vh] w-[100vw]">
         <div className="relative h-[100vh] w-[100vw] flex justify-center items-center">
@@ -90,18 +96,22 @@ const About = () => {
             variants={head}
             initial="hidden"
             animate={text ? "visible" : "hidden"}
-            className="text-3xl absolute top-12 left-20 font-semibold text-amber-100 cursor-default"
+            className={`${ruluko.className} text-3xl absolute top-12 left-20 font-semibold text-white cursor-default`}
           >
             {"   "}
-            Hi there! I{"'"}m <br />
-            <span className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-100">
+            Hi there! {"I'm"} <br />
+            <span
+              className={`${grenze.className} text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-100`}
+            >
               Roushan
             </span>
-            <p className="text-white text-[15px] w-[28%] font-light leading-4 pt-4 p-2">
-              A web developer with a knack for solving problems with creative
-              code. {"I'm"} particularly excited in Backend Frameworks and{" "}
-              {"I'm"} confident my experience in using Frontend frameworks like
-              ReactJs and Tailwind Css.
+            <p
+              className={`${ruluko.className} text-white text-[15px] w-[28%] font-light leading-4 pt-4 p-2`}
+            >
+              A full-stack web developer with a knack for solving problems with
+              creative code. From the user - friendly design to the data
+              crunching behind the scenes, bringing ideas to life is what I do
+              best.
             </p>
           </motion.span>
           <motion.div
@@ -162,6 +172,41 @@ const About = () => {
                   fill="#c9c9c9"
                   className="text-red-600 bg-white rounded-lg p-1"
                 />
+              </a>
+            </motion.span>
+          </motion.div>
+          <motion.div
+            className="absolute bottom-24 right-24 h-fit w-fit flex justify-center items-center gap-1"
+            onHoverStart={() => setRhover(true)}
+            onHoverEnd={() => setRhover(false)}
+          >
+            <a href="/docs/RoushanResume.pdf" target="_blank">
+              <motion.span className="relative">
+                <motion.h1
+                  className={`${alegreya.className} text-white text-2xl z-20 relative px-6 py-1`}
+                >
+                  My Resume
+                </motion.h1>
+                <motion.span
+                  className="absolute top-0 left-0 h-full w-full bg-zinc-800 z-10 opacity-75 rounded-xl"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: rhover ? 1 : 0 }}
+                  style={{ originX: rhover ? 0 : 1 }}
+                ></motion.span>
+              </motion.span>
+            </a>
+
+            <motion.span
+              className="text-white"
+              initial={{ rotate: 0, scale: 1 }}
+              whileHover={{
+                rotate: [0, 20, -20, 0],
+                scale: [1, 1, 1.25, 1.5],
+                transition: { duration: 0.25 },
+              }}
+            >
+              <a href="/docs/RoushanResume.pdf" target="_blank">
+                <ExternalLink />
               </a>
             </motion.span>
           </motion.div>

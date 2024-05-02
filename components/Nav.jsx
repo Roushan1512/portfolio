@@ -143,7 +143,7 @@ const Nav = () => {
             className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: homehover ? 1 : 0 }}
-            style={{ originX: 0 }}
+            style={{ originX: homehover ? 0 : 1 }}
           />
         </motion.span>
         <motion.span
@@ -169,7 +169,7 @@ const Nav = () => {
             className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: projects ? 1 : 0 }}
-            style={{ originX: 0 }}
+            style={{ originX: projects ? 0 : 1 }}
           />
         </motion.span>
         <motion.span
@@ -195,7 +195,7 @@ const Nav = () => {
             className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: about ? 1 : 0 }}
-            style={{ originX: 0 }}
+            style={{ originX: about ? 0 : 1 }}
           />
         </motion.span>
         <motion.span
@@ -219,7 +219,7 @@ const Nav = () => {
             className="absolute h-full w-full top-1 left-0 border-b-2 border-y-white -z-10"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: skills ? 1 : 0 }}
-            style={{ originX: 0 }}
+            style={{ originX: skills ? 0 : 1 }}
           />
         </motion.span>
         {/* <motion.span

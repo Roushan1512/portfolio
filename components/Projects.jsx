@@ -94,7 +94,7 @@ const Projects = () => {
             className="absolute bottom-0 right-24 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
@@ -115,7 +115,7 @@ const Projects = () => {
             className="absolute bottom-0 right-12 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
@@ -131,7 +131,7 @@ const Projects = () => {
             className="absolute bottom-0 right-0 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
@@ -173,7 +173,7 @@ const Projects = () => {
             className="absolute bottom-0 right-12 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
@@ -189,7 +189,7 @@ const Projects = () => {
             className="absolute bottom-0 right-0 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
@@ -228,7 +228,7 @@ const Projects = () => {
             className="absolute bottom-0 right-0 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
@@ -273,7 +273,7 @@ const Projects = () => {
             className="absolute bottom-0 right-0 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
@@ -316,7 +316,7 @@ const Projects = () => {
             className="absolute bottom-0 right-0 text-white cursor-pointer"
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{
-              rotate: [20, -20, 0],
+              rotate: [0, 20, -20, 0],
               scale: [1, 1.125, 1.25],
               transition: { duration: 0.25 },
             }}
