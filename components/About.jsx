@@ -9,7 +9,18 @@ import {
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import Pic4 from "@/public/images/MyPic4.jpg";
-import { Instagram, Github, Mail, Linkedin, ExternalLink } from "lucide-react";
+import {
+  Instagram,
+  Github,
+  Mail,
+  Linkedin,
+  ExternalLink,
+  MapPin,
+  GraduationCap,
+  BadgeCheck,
+  Bot,
+  UserRoundCheck,
+} from "lucide-react";
 import { Ruluko, Grenze, Alegreya } from "next/font/google";
 
 const ruluko = Ruluko({ subsets: ["latin"], weight: "400" });
@@ -18,6 +29,12 @@ const alegreya = Alegreya({ subsets: ["latin"] });
 
 const About = () => {
   const [rhover, setRhover] = useState(false);
+  const [l1hover, setL1hover] = useState(false);
+  const [l2hover, setL2hover] = useState(false);
+  const [l3hover, setL3hover] = useState(false);
+  const [l4hover, setL4hover] = useState(false);
+  const [l5hover, setL5hover] = useState(false);
+
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -56,6 +73,23 @@ const About = () => {
     hidden: { y: 100 },
     visible: { y: 0 },
   };
+  const outerStatus = {
+    hidden: {
+      opacity: 1,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.25,
+        delayChildren: 1,
+      },
+    },
+  };
+
+  const innerStatus = {
+    hidden: { x: 300 },
+    visible: { x: 0 },
+  };
 
   const head = {
     hidden: {
@@ -70,6 +104,7 @@ const About = () => {
       },
     },
   };
+
   return (
     <div
       ref={container}
@@ -176,19 +211,22 @@ const About = () => {
             </motion.span>
           </motion.div>
           <motion.div
-            className="absolute bottom-24 right-24 h-fit w-fit flex justify-center items-center gap-1"
+            className="absolute bottom-24 right-24 h-fit w-fit flex justify-center items-center gap-2 cursor-pointer"
             onHoverStart={() => setRhover(true)}
             onHoverEnd={() => setRhover(false)}
+            initial={{ x: 500 }}
+            animate={{ x: text ? 0 : 500 }}
+            transition={{ delay: 0.25 }}
           >
             <a href="/docs/RoushanResume.pdf" target="_blank">
               <motion.span className="relative">
                 <motion.h1
-                  className={`${alegreya.className} text-white text-2xl z-20 relative px-6 py-1`}
+                  className={`${alegreya.className} text-white text-2xl z-20 relative px-3 py-1`}
                 >
                   My Resume
                 </motion.h1>
                 <motion.span
-                  className="absolute top-0 left-0 h-full w-full bg-zinc-800 z-10 opacity-75 rounded-xl"
+                  className="absolute top-0 left-0 h-full w-full bg-[#061606] z-10 opacity-50 rounded-xl"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: rhover ? 1 : 0 }}
                   style={{ originX: rhover ? 0 : 1 }}
@@ -199,9 +237,9 @@ const About = () => {
             <motion.span
               className="text-white"
               initial={{ rotate: 0, scale: 1 }}
-              whileHover={{
-                rotate: [0, 20, -20, 0],
-                scale: [1, 1, 1.25, 1.5],
+              animate={{
+                rotate: rhover ? [0, 20, -20, 0] : 0,
+                scale: rhover ? [1, 1, 1.25, 1.5] : 1,
                 transition: { duration: 0.25 },
               }}
             >
@@ -210,6 +248,203 @@ const About = () => {
               </a>
             </motion.span>
           </motion.div>
+
+          <motion.div
+            className="absolute top-12 right-10 flex flex-col justify-center items-start gap-2"
+            variants={outerStatus}
+            initial="hidden"
+            animate={text ? "visible" : "hidden"}
+          >
+            <motion.div
+              className="relative flex justify-start items-center gap-2 cursor-default"
+              onHoverStart={() => setL1hover(true)}
+              onHoverEnd={() => setL1hover(false)}
+              variants={innerStatus}
+            >
+              <motion.span
+                initial={{ rotate: 0, scale: 1 }}
+                animate={{
+                  rotate: l1hover ? [0, 20, -20, 0] : 0,
+                  scale: l1hover ? [1, 1, 1.25, 1.5] : 1,
+                  transition: { duration: 0.25 },
+                }}
+              >
+                <MapPin className="text-white" />
+              </motion.span>
+              <motion.span className="relative">
+                <motion.h1
+                  className={`${alegreya.className} text-white text-lg z-20 relative px-2 py-1`}
+                >
+                  Living in India
+                </motion.h1>
+                <motion.span
+                  className="absolute h-full w-full bg-[#061606] opacity-50 rounded-xl top-0 left-0"
+                  initial={{ scaleX: 0 }}
+                  animate={{
+                    scaleX: l1hover ? 1 : 0,
+                    transition: {
+                      duration: 0.25,
+                      type: "spring",
+                      bounce: 0.1,
+                    },
+                  }}
+                  style={{ originX: l1hover ? 1 : 0 }}
+                />
+              </motion.span>
+            </motion.div>
+
+            <motion.div
+              className="relative flex justify-start items-center gap-2 cursor-default"
+              onHoverStart={() => setL2hover(true)}
+              onHoverEnd={() => setL2hover(false)}
+              variants={innerStatus}
+            >
+              <motion.span
+                initial={{ rotate: 0, scale: 1 }}
+                animate={{
+                  rotate: l2hover ? [0, 20, -20, 0] : 0,
+                  scale: l2hover ? [1, 1, 1.25, 1.5] : 1,
+                  transition: { duration: 0.25 },
+                }}
+              >
+                <GraduationCap className="text-white" />
+              </motion.span>
+              <motion.span className="relative">
+                <motion.h1
+                  className={`${alegreya.className} text-white text-lg z-20 relative px-2 py-1`}
+                >
+                  Studying CS Engineering
+                </motion.h1>
+                <motion.span
+                  className="absolute h-full w-full bg-[#061606] opacity-50 rounded-xl top-0 left-0"
+                  initial={{ scaleX: 0 }}
+                  animate={{
+                    scaleX: l2hover ? 1 : 0,
+                    transition: {
+                      duration: 0.25,
+                      type: "spring",
+                      bounce: 0.1,
+                    },
+                  }}
+                  style={{ originX: l2hover ? 1 : 0 }}
+                />
+              </motion.span>
+            </motion.div>
+
+            <motion.div
+              className="relative flex justify-start items-center gap-2 cursor-default"
+              onHoverStart={() => setL3hover(true)}
+              onHoverEnd={() => setL3hover(false)}
+              variants={innerStatus}
+            >
+              <motion.span
+                initial={{ rotate: 0, scale: 1 }}
+                animate={{
+                  rotate: l3hover ? [0, 20, -20, 0] : 0,
+                  scale: l3hover ? [1, 1, 1.25, 1.5] : 1,
+                  transition: { duration: 0.25 },
+                }}
+              >
+                <BadgeCheck className="text-white" />
+              </motion.span>
+              <motion.span className="relative">
+                <motion.h1
+                  className={`${alegreya.className} text-white text-lg z-20 relative px-2 py-1`}
+                >
+                  Learning Web Dev & ML
+                </motion.h1>
+                <motion.span
+                  className="absolute h-full w-full bg-[#061606] opacity-50 rounded-xl top-0 left-0"
+                  initial={{ scaleX: 0 }}
+                  animate={{
+                    scaleX: l3hover ? 1 : 0,
+                    transition: {
+                      duration: 0.25,
+                      type: "spring",
+                      bounce: 0.1,
+                    },
+                  }}
+                  style={{ originX: l3hover ? 1 : 0 }}
+                />
+              </motion.span>
+            </motion.div>
+
+            <motion.div
+              className="relative flex justify-start items-center gap-2 cursor-default"
+              onHoverStart={() => setL4hover(true)}
+              onHoverEnd={() => setL4hover(false)}
+              variants={innerStatus}
+            >
+              <motion.span
+                initial={{ rotate: 0, scale: 1 }}
+                animate={{
+                  rotate: l4hover ? [0, 20, -20, 0] : 0,
+                  scale: l4hover ? [1, 1, 1.25, 1.5] : 1,
+                  transition: { duration: 0.25 },
+                }}
+              >
+                <Bot className="text-white" />
+              </motion.span>
+              <motion.span className="relative">
+                <motion.h1
+                  className={`${alegreya.className} text-white text-lg z-20 relative px-2 py-1`}
+                >
+                  Member @ CSI Kolkata
+                </motion.h1>
+                <motion.span
+                  className="absolute h-full w-full bg-[#061606] opacity-50 rounded-xl top-0 left-0"
+                  initial={{ scaleX: 0 }}
+                  animate={{
+                    scaleX: l4hover ? 1 : 0,
+                    transition: {
+                      duration: 0.25,
+                      type: "spring",
+                      bounce: 0.1,
+                    },
+                  }}
+                  style={{ originX: l4hover ? 1 : 0 }}
+                />
+              </motion.span>
+            </motion.div>
+
+            <motion.div
+              className="relative flex justify-start items-center gap-2 cursor-default"
+              onHoverStart={() => setL5hover(true)}
+              onHoverEnd={() => setL5hover(false)}
+              variants={innerStatus}
+            >
+              <motion.span
+                initial={{ rotate: 0, scale: 1 }}
+                animate={{
+                  rotate: l5hover ? [0, 20, -20, 0] : 0,
+                  scale: l5hover ? [1, 1, 1.25, 1.5] : 1,
+                  transition: { duration: 0.25 },
+                }}
+              >
+                <UserRoundCheck className="text-white" />
+              </motion.span>
+              <motion.span className="relative">
+                <motion.h1
+                  className={`${alegreya.className} text-white text-lg z-20 relative px-2 py-1`}
+                >
+                  Member @ GDSC UEMK
+                </motion.h1>
+                <motion.span
+                  className="absolute h-full w-full bg-[#061606] opacity-50 rounded-xl top-0 left-0"
+                  initial={{ scaleX: 0 }}
+                  animate={{
+                    scaleX: l5hover ? 1 : 0,
+                    transition: {
+                      duration: 0.25,
+                      type: "spring",
+                      bounce: 0.1,
+                    },
+                  }}
+                  style={{ originX: l5hover ? 1 : 0 }}
+                />
+              </motion.span>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -217,3 +452,8 @@ const About = () => {
 };
 
 export default About;
+
+// Studying CS Engineering
+// Learning Web Dev & ML
+// Member @ CSI Kolkata
+// Member @ GDSC UEMK

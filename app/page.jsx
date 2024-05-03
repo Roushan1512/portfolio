@@ -15,7 +15,7 @@ const Mainpage = () => {
   // });
 
   return (
-    <div className="bg-zinc-950">
+    <div className="bg-zinc-950 select-none">
       <Home scrollYProgress={scrollYProgress} />
       <Projects />
       <About />
