@@ -153,7 +153,7 @@ const About = () => {
             variants={outerIcons}
             initial="hidden"
             animate={text ? "visible" : "hidden"}
-            className="absolute bottom-20 left-48 flex justify-center items-center gap-5 h-fit w-fit [transform:translate(-50%,-50%)]"
+            className="absolute bottom-[12.5vh] left-48 flex justify-center items-center gap-5 h-fit w-fit [transform:translate(-50%,-50%)]"
           >
             <motion.span
               variants={innerIcons}
@@ -177,7 +177,7 @@ const About = () => {
                 <Github
                   size={40}
                   strokeWidth={1.5}
-                  className="rounded-full bg-black text-white p-1"
+                  className="rounded-xl bg-black text-white p-1"
                 />
               </a>
             </motion.span>

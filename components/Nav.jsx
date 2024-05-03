@@ -56,9 +56,9 @@ const Nav = () => {
 
   const { scrollYProgress } = useScroll();
 
-  useMotionValueEvent(scrollYProgress, "change", (i) => {
-    console.log(i);
-  });
+  // useMotionValueEvent(scrollYProgress, "change", (i) => {
+  //   console.log(i);
+  // });
 
   return (
     <div className="fixed top-0 flex justify-center items-center pt-1 h-fit w-[100%] bg-white-500 z-10">
