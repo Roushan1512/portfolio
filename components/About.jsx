@@ -160,7 +160,10 @@ const About = () => {
               className="h-fit w-fit aspect-square"
               whileHover={{ scale: 1.5, marginLeft: 10, marginRight: 10 }}
             >
-              <a href="https://www.instagram.com/roushan_p.15?igsh=NGh6bGZ5eXNlOXBk">
+              <a
+                href="https://www.instagram.com/roushan_p.15?igsh=NGh6bGZ5eXNlOXBk"
+                target="_blank"
+              >
                 <Instagram
                   size={40}
                   strokeWidth={1.75}
@@ -173,7 +176,7 @@ const About = () => {
               className="h-fit w-fit aspect-square"
               whileHover={{ scale: 1.5, marginLeft: 10, marginRight: 10 }}
             >
-              <a href="https://github.com/Roushan1512">
+              <a href="https://github.com/Roushan1512" target="_blank">
                 <Github
                   size={40}
                   strokeWidth={1.5}
@@ -186,7 +189,10 @@ const About = () => {
               className="h-fit w-fit aspect-square"
               whileHover={{ scale: 1.5, marginLeft: 10, marginRight: 10 }}
             >
-              <a href="https://www.linkedin.com/in/roushan-poddar-8531a327a/">
+              <a
+                href="https://www.linkedin.com/in/roushan-poddar-8531a327a/"
+                target="_blank"
+              >
                 <Linkedin
                   size={40}
                   strokeWidth={0.25}
@@ -211,7 +217,7 @@ const About = () => {
             </motion.span>
           </motion.div>
           <motion.div
-            className="absolute bottom-24 right-24 h-fit w-fit flex justify-center items-center gap-2 cursor-pointer"
+            className="absolute bottom-[15vh] right-24 h-fit w-fit flex justify-center items-center gap-2 cursor-pointer"
             onHoverStart={() => setRhover(true)}
             onHoverEnd={() => setRhover(false)}
             initial={{ x: 500 }}
