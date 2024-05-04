@@ -46,7 +46,7 @@ const Projects = () => {
       <div className="sticky top-0 bg-blue-500 h-[100vh] w-[100vw]">
         <img
           src="/images/Blueback.jpg"
-          className="h-[100vh] w-[100vw] brightness-[0.25] blur-[2px]"
+          className="h-[100vh] w-[100vw] brightness-[0.25] object-cover"
         />
       </div>
       <motion.div

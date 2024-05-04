@@ -41,14 +41,14 @@ const About = () => {
     offset: ["start start", "end end"],
   });
 
-  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 400]);
-  const scalePic = useTransform(Yprog, [25, 250], [0.5, 5]);
-  const opacityPic = useTransform(Yprog, [25, 250], [0, 1]);
+  const Yprog = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const scalePic = useTransform(Yprog, [25, 150], [0.5, 5]);
+  const opacityPic = useTransform(Yprog, [25, 150], [0, 1]);
 
   const [text, setText] = useState(false);
 
   useMotionValueEvent(Yprog, "change", (i) => {
-    if (i > 250) {
+    if (i > 150) {
       setText(true);
     } else {
       setText(false);
@@ -109,7 +109,7 @@ const About = () => {
     <div
       ref={container}
       id="about"
-      className="h-[400vh] w-[100vw] bg-black relative"
+      className="h-[300vh] w-[100vw] bg-black relative"
     >
       <div className="sticky top-[11vh] flex justify-center items-center h-[100vh] w-[100vw]">
         <div className="relative h-[100vh] w-[100vw] flex justify-center items-center">

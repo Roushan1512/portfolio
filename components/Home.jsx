@@ -42,7 +42,7 @@ const Home = ({ scrollYProgress }) => {
         transition={{
           duration: 3,
           ease: "easeInOut",
-          delay: 1,
+          delay: 0.5,
         }}
         style={{ x: Yprog }}
         className={`text-[100px] z-10 text-orange-300 font-semibold ${garamond.className} cursor-default`}
@@ -58,7 +58,7 @@ const Home = ({ scrollYProgress }) => {
           y: [1000, 0, 0],
           scale: [0.5, 0.5, 1],
         }}
-        transition={{ duration: 2.5, ease: "easeInOut", delay: 2 }}
+        transition={{ duration: 2.5, ease: "easeInOut", delay: 1.5 }}
         style={{ x: YprogN }}
         className={`text-5xl z-10 font-medium text-orange-100 to-orange-400 ${garamond.className} cursor-default`}
       >
