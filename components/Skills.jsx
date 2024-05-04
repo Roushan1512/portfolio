@@ -115,8 +115,9 @@ const Skills = () => {
                 initial="hidden"
                 animate={screen ? "visible" : "hidden"}
               >
-                {langs.map((i) => (
+                {langs.map((i, index) => (
                   <motion.span
+                    key={index}
                     className="flex justify-center items-center"
                     variants={innerIcons}
                     whileHover={{
@@ -170,8 +171,9 @@ const Skills = () => {
                 initial="hidden"
                 animate={screen ? "visible" : "hidden"}
               >
-                {tools.map((i) => (
+                {tools.map((i, index) => (
                   <motion.span
+                    key={index}
                     className="flex justify-center items-center"
                     variants={innerIcons}
                     whileHover={{ scale: 1.2, marginLeft: 10, marginRight: 10 }}
@@ -222,8 +224,9 @@ const Skills = () => {
               initial="hidden"
               animate={screen ? "visible" : "hidden"}
             >
-              {webdev.map((i) => (
+              {webdev.map((i, index) => (
                 <motion.span
+                  key={index}
                   className="flex justify-center items-center"
                   variants={innerIcons}
                   whileHover={{ scale: 1.2, marginLeft: 10, marginRight: 10 }}
