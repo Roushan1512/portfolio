@@ -208,7 +208,9 @@ const Nav = () => {
           <span
             onClick={() => {
               window.scrollTo({
-                top: document.getElementById("skills").offsetTop,
+                top:
+                  document.getElementById("skills").offsetTop +
+                  window.innerHeight * 0.1,
                 behaviour: "smooth",
               });
             }}
