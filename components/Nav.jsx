@@ -79,7 +79,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="fixed top-0 md:flex justify-center items-center pt-1 h-fit w-screen bg-white-500 z-10 hidden">
+      <div className="fixed top-0 md:flex justify-center items-center pt-1 h-fit w-screen z-10 hidden">
         {/* Name Component  */}
 
         <motion.div
@@ -263,7 +263,7 @@ const Nav = () => {
 
       {/* Mobile NavBar */}
 
-      <div className="fixed top-0 md:hidden flex justify-center items-center pt-1 h-fit w-screen bg-white-500 z-10">
+      <div className="fixed top-0 md:hidden flex justify-center items-center pt-1 h-fit w-screen z-10">
         {/* Name Component  */}
 
         <motion.div
@@ -351,7 +351,7 @@ const Nav = () => {
             animate={{ scaleX: menu ? 1 : 0 }}
             style={{ originX: 1 }}
             transition={{ duration: 0.5, type: "spring", bounce: 0.25 }}
-            className={`h-screen w-fit bg-black px-10 fixed top-0 right-0 ${alegreya.className} text-xl`}
+            className={`h-screen w-fit bg-black rounded-l-3xl px-10 fixed top-0 right-0 ${alegreya.className} text-xl`}
           >
             <motion.div
               className="h-full w-full flex flex-col justify-center items-center gap-2"

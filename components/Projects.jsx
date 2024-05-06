@@ -68,13 +68,14 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: cypher }}
-        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#31032f3d] rounded-[20px] border-[1px] border-white py-4"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center md:h-[50vh] h-[60vh] w-[80vw] mb-[100vh] bg-[#31032f3d] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/CypherPromo.mp4"
-          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-5/6 rounded-3xl md:ml-[5vw] relative"
           loop
-          controls={true}
+          autoPlay
+          muted
         ></video>
         <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
@@ -83,7 +84,7 @@ const Projects = () => {
             Cypher
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
+            className={`text-white text-sm text-wrap md:px-10 px-0 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             This payment fraud application employs machine learning algorithms
             to detect suspicious transactions & flagging potential fraudulent
@@ -146,13 +147,14 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: agrico }}
-        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#3f3e063d] rounded-[20px] border-[1px] border-white py-4"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center md:h-[50vh] h-[60vh] w-[80vw] mb-[100vh] bg-[#3f3e063d] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/AgricoPromo.mp4"
-          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-5/6 rounded-3xl md:ml-[5vw] relative"
           loop
-          controls={true}
+          autoPlay
+          muted
         ></video>
         <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
@@ -161,7 +163,7 @@ const Projects = () => {
             AgriCo
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
+            className={`text-white text-sm text-wrap md:px-10 px-0 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             Agrico is an innovative EdTech platform empowering individuals and
             communities to learn modern farming practices and cultivate
@@ -203,11 +205,11 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: reddit }}
-        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#ffae0025] rounded-[20px] border-[1px] border-white py-4"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center md:h-[50vh] h-[60vh] w-[80vw] mb-[100vh] bg-[#ffae0025] rounded-[20px] border-[1px] border-white py-4"
       >
         <img
           src="/images/reddit.png"
-          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-5/6 rounded-3xl md:ml-[5vw] relative"
         />
         <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
@@ -216,7 +218,7 @@ const Projects = () => {
             Reddit Rip Off
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
+            className={`text-white text-sm text-wrap md:px-10 px-0 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             As the name suggests, this website is a side hustle I made inspired
             by the reddit community. It is a simple forum where all users can
@@ -245,13 +247,14 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: cookbook }}
-        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#2b23033d] rounded-[20px] border-[1px] border-white py-4"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center md:h-[50vh] h-[60vh] w-[80vw] mb-[100vh] bg-[#2b23033d] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/CooksBookPromo.mp4"
-          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-5/6 rounded-3xl md:ml-[5vw] relative"
           loop
-          controls={true}
+          autoPlay
+          muted
         ></video>
         <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
@@ -260,7 +263,7 @@ const Projects = () => {
             Cook{"'"}s Book
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
+            className={`text-white text-sm text-wrap md:px-10 px-0 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             Cook{"'"}s Book is a recipe generator with a twist. Unlike
             traditional recipe sites, it doesn{"'"}t require a specific shopping
@@ -287,13 +290,14 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: robinfood }}
-        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#0779112c] rounded-[20px] border-[1px] border-white py-4"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center md:h-[50vh] h-[60vh] w-[80vw] mb-[100vh] bg-[#0779112c] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/RobinFoodPromo.mp4"
-          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-5/6 rounded-3xl md:ml-[5vw] relative"
           loop
-          controls={true}
+          autoPlay
+          muted
         ></video>
         <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
@@ -302,7 +306,7 @@ const Projects = () => {
             RobinFood
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
+            className={`text-white text-sm text-wrap md:px-10 px-0 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             RobinFood is a web platform that bridges the gap between restaurants
             with surplus food and NGOs, food banks, dedicated to distributing
