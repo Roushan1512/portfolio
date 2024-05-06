@@ -68,27 +68,26 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: cypher }}
-        className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#31032f3d] rounded-[20px] border-[1px] border-white"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#31032f3d] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/CypherPromo.mp4"
-          className="h-[35vh] w-[35vw] rounded-3xl ml-[5vw] relative"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
           loop
           controls={true}
         ></video>
-        <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
+        <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
+            className={`${solway.className} text-white text-3xl mt-2 md:border-b-[1px] md:border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             Cypher
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
+            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             This payment fraud application employs machine learning algorithms
-            to detect suspicious transactions, flagging potential fraudulent
-            activity in real-time by analyzing various data points such as
-            transaction history, user behavior and geographical patterns.
+            to detect suspicious transactions & flagging potential fraudulent
+            activity in real-time.
           </p>
           <motion.span
             className="absolute bottom-0 right-24 text-white cursor-pointer"
@@ -147,27 +146,26 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: agrico }}
-        className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#3f3e063d] rounded-[20px] border-[1px] border-white"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#3f3e063d] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/AgricoPromo.mp4"
-          className="h-[35vh] w-[35vw] rounded-3xl ml-[5vw]"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
           loop
           controls={true}
         ></video>
-        <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
+        <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
+            className={`${solway.className} text-white text-3xl mt-2 md:border-b-[1px] md:md:border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             AgriCo
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
+            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             Agrico is an innovative EdTech platform empowering individuals and
             communities to learn modern farming practices and cultivate
-            sustainable agricultural success through interactive tools and
-            collaborative learning spaces.
+            sustainable agriculture.
           </p>
           <motion.span
             className="absolute bottom-0 right-12 text-white cursor-pointer"
@@ -205,20 +203,20 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: reddit }}
-        className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#ffae0025] rounded-[20px] border-[1px] border-white"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#ffae0025] rounded-[20px] border-[1px] border-white py-4"
       >
         <img
           src="/images/reddit.png"
-          className="h-[35vh] w-[35vw] rounded-md ml-[5vw]"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
         />
-        <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
+        <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
+            className={`${solway.className} text-white text-3xl mt-2 md:border-b-[1px] md:border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             Reddit Rip Off
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
+            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             As the name suggests, this website is a side hustle I made inspired
             by the reddit community. It is a simple forum where all users can
@@ -247,22 +245,22 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: cookbook }}
-        className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#2b23033d] rounded-[20px] border-[1px] border-white"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#2b23033d] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/CooksBookPromo.mp4"
-          className="h-[35vh] w-[35vw] rounded-3xl ml-[5vw]"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
           loop
           controls={true}
         ></video>
-        <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
+        <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
+            className={`${solway.className} text-white text-3xl mt-2 md:border-b-[1px] md:border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             Cook{"'"}s Book
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
+            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             Cook{"'"}s Book is a recipe generator with a twist. Unlike
             traditional recipe sites, it doesn{"'"}t require a specific shopping
@@ -289,28 +287,26 @@ const Projects = () => {
 
       <motion.div
         style={{ opacity: robinfood }}
-        className="sticky top-48 flex justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#0779112c] rounded-[20px] border-[1px] border-white"
+        className="sticky top-48 flex md:flex-row flex-col justify-start items-center h-[50vh] w-[80vw] mb-[100vh] bg-[#0779112c] rounded-[20px] border-[1px] border-white py-4"
       >
         <video
           src="/videos/RobinFoodPromo.mp4"
-          className="h-[35vh] w-[35vw] rounded-3xl ml-[5vw]"
+          className="md:h-[35vh] h-2/4 md:w-[35vw] w-2/4 rounded-3xl md:ml-[5vw] relative"
           loop
           controls={true}
         ></video>
-        <div className="flex flex-col justify-start items-center h-[35vh] w-[35vw] relative">
+        <div className="flex flex-col justify-start items-center md:h-[35vh] h-4/5 md:w-[35vw] w-4/5 relative">
           <h1
-            className={`${solway.className} text-white text-3xl border-b-[1px] border-b-white w-[30vw] text-center pb-4 cursor-default`}
+            className={`${solway.className} text-white text-3xl mt-2 md:border-b-[1px] md:border-b-white w-[30vw] text-center pb-4 cursor-default`}
           >
             RobinFood
           </h1>
           <p
-            className={`text-white text-sm text-wrap px-10 pt-8 text-center font-thin cursor-default`}
+            className={`text-white text-sm text-wrap px-10 md:pt-8 text-center font-thin cursor-default md:w-fit w-full`}
           >
             RobinFood is a web platform that bridges the gap between restaurants
             with surplus food and NGOs, food banks, dedicated to distributing
-            food to those in need by facilitating the efficient and timely
-            donation of excess food from restaurants to organizations that can
-            redirect it to individuals facing food insecurity.
+            food to those in need.
           </p>
           <motion.span
             className="absolute bottom-0 right-0 text-white cursor-pointer"

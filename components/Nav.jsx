@@ -319,7 +319,15 @@ const Nav = () => {
         {/* Links Component  */}
 
         <motion.div className="h-fit w-1/2 flex justify-end items-center px-6 relative">
-          <button
+          <motion.button
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.5,
+              type: "spring",
+              bounce: 0.25,
+            }}
             className="h-16 w-8 z-10 relative"
             onClick={() => setMenu(!menu)}
           >
@@ -337,7 +345,7 @@ const Nav = () => {
             >
               <CircleChevronRight className="h-full w-full" />
             </motion.div>
-          </button>
+          </motion.button>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: menu ? 1 : 0 }}

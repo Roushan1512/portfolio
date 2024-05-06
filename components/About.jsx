@@ -70,7 +70,7 @@ const About = () => {
   };
 
   const innerIcons = {
-    hidden: { y: 100 },
+    hidden: { y: 200 },
     visible: { y: 0 },
   };
   const outerStatus = {
@@ -112,7 +112,7 @@ const About = () => {
       className="h-[300vh] w-[100vw] bg-black relative"
     >
       <div className="sticky top-[11vh] flex justify-center items-center h-[100vh] w-[100vw]">
-        <div className="relative h-[100vh] w-[100vw] flex justify-center items-center overflow-x-hidden">
+        <div className="relative h-[100vh] w-[100vw] flex justify-center items-center overflow-hidden">
           <motion.div
             className="h-[20vh] w-[20vw] brightness-[0.75]"
             style={{
@@ -141,7 +141,7 @@ const About = () => {
               Roushan
             </span>
             <p
-              className={`${ruluko.className} text-white text-[15px] w-[28%] font-light leading-4 pt-4 p-2`}
+              className={`${ruluko.className} text-white text-[15px] w-[28%] font-light leading-4 pt-4 p-2 md:block hidden`}
             >
               A full-stack web developer with a knack for solving problems with
               creative code. From the user - friendly design to the data
@@ -153,7 +153,7 @@ const About = () => {
             variants={outerIcons}
             initial="hidden"
             animate={text ? "visible" : "hidden"}
-            className="absolute bottom-[12.5vh] left-48 flex justify-center items-center gap-5 h-fit w-fit [transform:translate(-50%,-50%)]"
+            className="absolute md:bottom-[12.5vh] bottom-[20vh] left-48 flex justify-center items-center gap-5 h-fit w-fit [transform:translate(-50%,-50%)]"
           >
             <motion.span
               variants={innerIcons}
@@ -256,7 +256,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="absolute top-12 right-10 flex flex-col justify-center items-start gap-2"
+            className="absolute md:top-12 top-44 md:right-10 right-2 flex flex-col justify-center items-start gap-2"
             variants={outerStatus}
             initial="hidden"
             animate={text ? "visible" : "hidden"}

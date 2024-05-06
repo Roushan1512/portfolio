@@ -96,9 +96,9 @@ const Skills = () => {
           >
             - Skills -
           </h1>
-          <div className="w-[100vw] h-fit py-4 flex justify-center items-start">
+          <div className="w-[100vw] h-fit py-4 flex md:flex-row flex-col justify-center md:items-start items-center">
             <div
-              className={`w-[50vw] flex flex-col justify-center items-center px-8 text-3xl ${solway.className}`}
+              className={`md:w-[50vw] w-full flex flex-col justify-center items-center px-8 md:text-3xl text-2xl md:my-0 my-2 ${solway.className}`}
             >
               <motion.h1
                 initial={{ opacity: 0 }}
@@ -106,11 +106,12 @@ const Skills = () => {
                   opacity: screen ? 1 : 0,
                   transition: { delay: 0.1 },
                 }}
+                className="text-center"
               >
                 Programmming Languages
               </motion.h1>
               <motion.div
-                className="flex flex-wrap gap-8 p-8"
+                className="flex md:flex-wrap md:gap-8 md:p-8 md:py-0 py-1"
                 variants={outerIcons}
                 initial="hidden"
                 animate={screen ? "visible" : "hidden"}
@@ -146,7 +147,10 @@ const Skills = () => {
                       </motion.span>
                     ) : (
                       <motion.span>
-                        <img src={i.src} className="h-16 aspect-square" />
+                        <img
+                          src={i.src}
+                          className="md:h-16 h-12 aspect-square"
+                        />
                       </motion.span>
                     )}
                   </motion.span>
@@ -154,7 +158,7 @@ const Skills = () => {
               </motion.div>
             </div>
             <div
-              className={`w-[50vw] flex flex-col justify-center items-center px-8 text-3xl ${solway.className}`}
+              className={`md:w-[50vw] w-full flex flex-col justify-center items-center px-8 md:text-3xl text-2xl md:my-0 my-2 ${solway.className}`}
             >
               <motion.h1
                 initial={{ opacity: 0 }}
@@ -166,7 +170,7 @@ const Skills = () => {
                 Tools
               </motion.h1>
               <motion.div
-                className="flex flex-wrap gap-6 p-8"
+                className="flex md:flex-wrap md:gap-8 md:p-8 md:py-0 py-1"
                 variants={outerIcons}
                 initial="hidden"
                 animate={screen ? "visible" : "hidden"}
@@ -198,7 +202,10 @@ const Skills = () => {
                       </motion.span>
                     ) : (
                       <motion.span>
-                        <img src={i.src} className="h-16 aspect-square" />
+                        <img
+                          src={i.src}
+                          className="md:h-16 h-12 aspect-square"
+                        />
                       </motion.span>
                     )}
                   </motion.span>
@@ -206,8 +213,9 @@ const Skills = () => {
               </motion.div>
             </div>
           </div>
+
           <div
-            className={`w-[100vw] flex flex-col justify-center items-center px-8 text-3xl ${solway.className}`}
+            className={`w-[100vw] flex flex-col justify-center items-center px-8 md:text-3xl text-2xl md:my-0 my-2 ${solway.className}`}
           >
             <motion.h1
               initial={{ opacity: 0 }}
@@ -215,11 +223,12 @@ const Skills = () => {
                 opacity: screen ? 1 : 0,
                 transition: { delay: 0.1 },
               }}
+              className="text-center"
             >
               Web Development
             </motion.h1>
             <motion.div
-              className="flex flex-wrap gap-6 p-8"
+              className="flex flex-wrap gap-6 p-8 items-center justify-center"
               variants={outerIcons}
               initial="hidden"
               animate={screen ? "visible" : "hidden"}
@@ -251,7 +260,7 @@ const Skills = () => {
                     </motion.span>
                   ) : (
                     <motion.span>
-                      <img src={i.src} className="h-16 aspect-square" />
+                      <img src={i.src} className="md:h-16 h-12 aspect-square" />
                     </motion.span>
                   )}
                 </motion.span>
