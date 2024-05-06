@@ -359,6 +359,7 @@ const Nav = () => {
                     top: document.getElementById("home").offsetTop,
                     behaviour: "smooth",
                   });
+                  setMenu(false);
                 }}
               >
                 Home
@@ -373,6 +374,7 @@ const Nav = () => {
                       window.innerHeight * 1.3,
                     behaviour: "smooth",
                   });
+                  setMenu(false);
                 }}
               >
                 Projects
@@ -387,6 +389,7 @@ const Nav = () => {
                       window.innerHeight * 1.5,
                     behaviour: "smooth",
                   });
+                  setMenu(false);
                 }}
               >
                 About Me
@@ -401,6 +404,7 @@ const Nav = () => {
                       window.innerHeight * 0.1,
                     behaviour: "smooth",
                   });
+                  setMenu(false);
                 }}
               >
                 Skills
