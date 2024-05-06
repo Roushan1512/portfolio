@@ -26,7 +26,7 @@ const Skills = () => {
 
   const Yprog = useTransform(scrollYProgress, [0, 1], [1, 150]);
   useMotionValueEvent(Yprog, "change", (i) => {
-    console.log(i);
+    //console.log(i);
     if (i > 1) {
       setScreen(true);
     } else {
@@ -36,7 +36,7 @@ const Skills = () => {
 
   const [langs, setLangs] = useState([
     { id: "Java", src: "/logos/java.svg", hov: false },
-    { id: "C", src: "/logos/c.svg", hov: false },
+    { id: "C Prog.", src: "/logos/c.svg", hov: false },
     { id: "Python", src: "/logos/python.svg", hov: false },
     { id: "JavaScript", src: "/logos/javascript.svg", hov: false },
   ]);
@@ -54,7 +54,7 @@ const Skills = () => {
   ]);
 
   const [tools, setTools] = useState([
-    { id: "Git", src: "/logos/git.svg", hov: false },
+    { id: "Git Toolkit", src: "/logos/git.svg", hov: false },
     { id: "Figma", src: "/logos/figma.svg", hov: false },
     { id: "Adobe Photoshop", src: "/logos/photoshop.svg", hov: false },
     { id: "Ms Office", src: "/logos/office.svg", hov: false },
@@ -110,7 +110,7 @@ const Skills = () => {
                 Programmming Languages
               </motion.h1>
               <motion.div
-                className="flex flex-wrap gap-6 p-8"
+                className="flex flex-wrap gap-8 p-8"
                 variants={outerIcons}
                 initial="hidden"
                 animate={screen ? "visible" : "hidden"}
@@ -266,7 +266,7 @@ const Skills = () => {
               transition: { delay: 1 },
             }}
           >
-            <SquareMousePointer />
+            <SquareMousePointer size={25} />
           </motion.div>
           <motion.div
             className="absolute bottom-8 left-8 text-white text-md flex gap-4 justify-center items-center"

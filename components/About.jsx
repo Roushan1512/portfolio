@@ -112,7 +112,7 @@ const About = () => {
       className="h-[300vh] w-[100vw] bg-black relative"
     >
       <div className="sticky top-[11vh] flex justify-center items-center h-[100vh] w-[100vw]">
-        <div className="relative h-[100vh] w-[100vw] flex justify-center items-center">
+        <div className="relative h-[100vh] w-[100vw] flex justify-center items-center overflow-x-hidden">
           <motion.div
             className="h-[20vh] w-[20vw] brightness-[0.75]"
             style={{
@@ -136,7 +136,7 @@ const About = () => {
             {"   "}
             Hi there! {"I'm"} <br />
             <span
-              className={`${grenze.className} text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-100`}
+              className={`${grenze.className} text-6xl font-bold text-amber-300`}
             >
               Roushan
             </span>

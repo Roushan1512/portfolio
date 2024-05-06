@@ -24,7 +24,7 @@ const Projects = () => {
   });
 
   const Yprog = useTransform(scrollYProgress, [0, 1], [0, 1000]);
-  const bar = useTransform(Yprog, [105, 1000], [0, 45]);
+  const bar = useTransform(Yprog, [105, 1000], [0, 1]);
   const headopac = useTransform(Yprog, [950, 1000], [1, -0]);
 
   const cypher = useTransform(Yprog, [220, 300], [1, -1]);
@@ -43,10 +43,10 @@ const Projects = () => {
       ref={container}
       className="h-[1000vh] w-[100vw] flex flex-col justify-start items-center relative bg-black"
     >
-      <div className="sticky top-0 bg-blue-500 h-[100vh] w-[100vw]">
+      <div className="sticky top-0 h-screen w-screen">
         <img
           src="/images/Blueback.jpg"
-          className="h-[100vh] w-[100vw] brightness-[0.25] object-cover"
+          className="h-screen w-screen brightness-[0.25] object-cover"
         />
       </div>
       <motion.div
@@ -60,7 +60,7 @@ const Projects = () => {
         </h1>
         <motion.span
           style={{ scaleX: bar }}
-          className="mt-3 h-[2px] w-8 bg-white"
+          className="mt-3 h-[2px] w-screen bg-white"
         ></motion.span>
       </motion.div>
 
