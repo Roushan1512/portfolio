@@ -111,7 +111,7 @@ const Skills = () => {
                 Programmming Languages
               </motion.h1>
               <motion.div
-                className="flex md:flex-wrap md:gap-8 md:p-8 md:py-0 py-1"
+                className="flex md:flex-wrap md:gap-8 md:p-8 md:py-0 py-1 mt-2"
                 variants={outerIcons}
                 initial="hidden"
                 animate={screen ? "visible" : "hidden"}
@@ -170,7 +170,7 @@ const Skills = () => {
                 Tools
               </motion.h1>
               <motion.div
-                className="flex md:flex-wrap md:gap-8 md:p-8 md:py-0 py-1"
+                className="flex md:flex-wrap md:gap-8 md:p-8 md:py-0 py-1 mt-2"
                 variants={outerIcons}
                 initial="hidden"
                 animate={screen ? "visible" : "hidden"}

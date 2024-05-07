@@ -87,7 +87,7 @@ const About = () => {
   };
 
   const innerStatus = {
-    hidden: { x: 300 },
+    hidden: { x: 400 },
     visible: { x: 0 },
   };
 
@@ -256,7 +256,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="absolute md:top-12 top-44 md:right-10 right-2 flex flex-col justify-center items-start gap-2"
+            className="absolute md:top-12 top-1/2 md:right-10 flex flex-col justify-center items-start md:gap-2 gap-0"
             variants={outerStatus}
             initial="hidden"
             animate={text ? "visible" : "hidden"}
