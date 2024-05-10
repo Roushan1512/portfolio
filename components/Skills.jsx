@@ -275,7 +275,8 @@ const Skills = () => {
               transition: { delay: 1 },
             }}
           >
-            <SquareMousePointer size={25} />
+            {/* <SquareMousePointer size={25} /> */}
+            <img src="/images/iconr4.png" className="h-8 w-8" />
           </motion.div>
           <motion.div
             className="absolute bottom-8 left-8 text-white text-md flex gap-4 justify-center items-center"
