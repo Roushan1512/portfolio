@@ -35,29 +35,61 @@ const Skills = () => {
   });
 
   const [langs, setLangs] = useState([
-    { id: "Java", src: "/logos/java.svg", hov: false },
-    { id: "C Prog.", src: "/logos/c.svg", hov: false },
-    { id: "Python", src: "/logos/python.svg", hov: false },
-    { id: "JavaScript", src: "/logos/javascript.svg", hov: false },
+    { id: "https://www.java.com/en/", src: "/logos/java.svg", hov: false },
+    {
+      id: "https://www.w3schools.com/c/c_intro.php",
+      src: "/logos/c.svg",
+      hov: false,
+    },
+    { id: "https://www.python.org/", src: "/logos/python.svg", hov: false },
+    {
+      id: "https://www.w3schools.com/js/default.asp",
+      src: "/logos/javascript.svg",
+      hov: false,
+    },
   ]);
 
   const [webdev, setWebdev] = useState([
-    { id: "HTML", src: "/logos/html.svg", hov: false },
-    { id: "Css", src: "/logos/css.svg", hov: false },
-    { id: "Tailwind Css", src: "/logos/tailwind.svg", hov: false },
-    { id: "Node Js", src: "/logos/nodejs.svg", hov: false },
-    { id: "React Js", src: "/logos/react.svg", hov: false },
-    { id: "Express Js", src: "/logos/express.svg", hov: false },
-    { id: "Next Js", src: "/logos/next.svg", hov: false },
-    { id: "Mongo DB", src: "/logos/mongo.svg", hov: false },
-    { id: "Flask", src: "/logos/flask.svg", hov: false },
+    {
+      id: "https://www.w3schools.com/html/html_intro.asp",
+      src: "/logos/html.svg",
+      hov: false,
+    },
+    {
+      id: "https://www.w3schools.com/css/css_intro.asp",
+      src: "/logos/css.svg",
+      hov: false,
+    },
+    { id: "https://tailwindcss.com/", src: "/logos/tailwind.svg", hov: false },
+    { id: "https://nodejs.org/en", src: "/logos/nodejs.svg", hov: false },
+    { id: "https://react.dev/", src: "/logos/react.svg", hov: false },
+    { id: "https://expressjs.com/", src: "/logos/express.svg", hov: false },
+    { id: "https://nextjs.org/", src: "/logos/next.svg", hov: false },
+    { id: "https://www.mongodb.com/", src: "/logos/mongo.svg", hov: false },
+    {
+      id: "https://flask.palletsprojects.com/en/3.0.x/",
+      src: "/logos/flask.svg",
+      hov: false,
+    },
   ]);
 
   const [tools, setTools] = useState([
-    { id: "Git Toolkit", src: "/logos/git.svg", hov: false },
-    { id: "Figma", src: "/logos/figma.svg", hov: false },
-    { id: "Adobe Photoshop", src: "/logos/photoshop.svg", hov: false },
-    { id: "Ms Office", src: "/logos/office.svg", hov: false },
+    {
+      id: "https://git-scm.com/docs/git-tools",
+      src: "/logos/git.svg",
+      hov: false,
+    },
+    { id: "https://www.figma.com/", src: "/logos/figma.svg", hov: false },
+    {
+      id: "https://www.adobe.com/in/products/photoshop.html",
+      src: "/logos/photoshop.svg",
+      hov: false,
+    },
+    {
+      id: "https://www.microsoft.com/en-in/microsoft-365/microsoft-office",
+      src: "/logos/office.svg",
+      hov: false,
+    },
   ]);
 
   const outerIcons = {
@@ -106,7 +138,7 @@ const Skills = () => {
                   opacity: screen ? 1 : 0,
                   transition: { delay: 0.1 },
                 }}
-                className="text-center"
+                className="text-center mb-2"
               >
                 Programmming Languages
               </motion.h1>
@@ -119,40 +151,20 @@ const Skills = () => {
                 {langs.map((i, index) => (
                   <motion.span
                     key={index}
-                    className="flex justify-center items-center"
+                    className="flex justify-center items-center cursor-pointer"
                     variants={innerIcons}
                     whileHover={{
-                      scale: 1.2,
-                      marginLeft: 10,
-                      marginRight: 10,
+                      scale: 1.5,
+                      marginLeft: 20,
+                      marginRight: 20,
                     }}
-                    onHoverStart={() =>
-                      setLangs(
-                        langs.map((j) =>
-                          j.id === i.id ? { ...j, hov: true } : j
-                        )
-                      )
-                    }
-                    onHoverEnd={() =>
-                      setLangs(
-                        langs.map((j) =>
-                          j.id === i.id ? { ...j, hov: false } : j
-                        )
-                      )
-                    }
                   >
-                    {i.hov ? (
-                      <motion.span className="text-black text-base font-bold bg-[#ffffffe1] rounded-full px-4 py-2">
-                        {i.id}
-                      </motion.span>
-                    ) : (
-                      <motion.span>
-                        <img
-                          src={i.src}
-                          className="md:h-16 h-12 aspect-square"
-                        />
-                      </motion.span>
-                    )}
+                    <a href={i.id} target="_blank">
+                      <img
+                        src={i.src}
+                        className="md:h-16 h-12 aspect-square rounded-full"
+                      />
+                    </a>
                   </motion.span>
                 ))}
               </motion.div>
@@ -166,6 +178,7 @@ const Skills = () => {
                   opacity: screen ? 1 : 0,
                   transition: { delay: 0.1 },
                 }}
+                className="text-center mb-2"
               >
                 Tools
               </motion.h1>
@@ -178,36 +191,17 @@ const Skills = () => {
                 {tools.map((i, index) => (
                   <motion.span
                     key={index}
-                    className="flex justify-center items-center"
+                    className="flex justify-center items-center cursor-pointer"
                     variants={innerIcons}
-                    whileHover={{ scale: 1.2, marginLeft: 10, marginRight: 10 }}
-                    onHoverStart={() =>
-                      setTools(
-                        tools.map((j) =>
-                          j.id === i.id ? { ...j, hov: true } : j
-                        )
-                      )
-                    }
-                    onHoverEnd={() =>
-                      setTools(
-                        tools.map((j) =>
-                          j.id === i.id ? { ...j, hov: false } : j
-                        )
-                      )
-                    }
+                    whileHover={{
+                      scale: 1.5,
+                      marginLeft: 20,
+                      marginRight: 20,
+                    }}
                   >
-                    {i.hov ? (
-                      <motion.span className="text-black text-base font-bold bg-[#ffffffe1] rounded-full px-4 py-2">
-                        {i.id}
-                      </motion.span>
-                    ) : (
-                      <motion.span>
-                        <img
-                          src={i.src}
-                          className="md:h-16 h-12 aspect-square"
-                        />
-                      </motion.span>
-                    )}
+                    <a href={i.id} target="_blank">
+                      <img src={i.src} className="md:h-16 h-12 aspect-square" />
+                    </a>
                   </motion.span>
                 ))}
               </motion.div>
@@ -215,7 +209,7 @@ const Skills = () => {
           </div>
 
           <div
-            className={`w-[100vw] flex flex-col justify-center items-center px-8 md:text-3xl text-2xl md:my-0 my-2 ${solway.className}`}
+            className={`w-[100vw] flex flex-col justify-center items-center px-8 md:text-3xl text-2xl my-2 ${solway.className}`}
           >
             <motion.h1
               initial={{ opacity: 0 }}
@@ -236,33 +230,17 @@ const Skills = () => {
               {webdev.map((i, index) => (
                 <motion.span
                   key={index}
-                  className="flex justify-center items-center"
+                  className="flex justify-center items-center cursor-pointer"
                   variants={innerIcons}
-                  whileHover={{ scale: 1.2, marginLeft: 10, marginRight: 10 }}
-                  onHoverStart={() =>
-                    setWebdev(
-                      webdev.map((j) =>
-                        j.id === i.id ? { ...j, hov: true } : j
-                      )
-                    )
-                  }
-                  onHoverEnd={() =>
-                    setWebdev(
-                      webdev.map((j) =>
-                        j.id === i.id ? { ...j, hov: false } : j
-                      )
-                    )
-                  }
+                  whileHover={{
+                    scale: 1.5,
+                    marginLeft: 20,
+                    marginRight: 20,
+                  }}
                 >
-                  {i.hov ? (
-                    <motion.span className="text-black text-base font-bold bg-[#ffffffe1] rounded-full px-4 py-2">
-                      {i.id}
-                    </motion.span>
-                  ) : (
-                    <motion.span>
-                      <img src={i.src} className="md:h-16 h-12 aspect-square" />
-                    </motion.span>
-                  )}
+                  <a href={i.id} target="_blank">
+                    <img src={i.src} className="md:h-16 h-12 aspect-square" />
+                  </a>
                 </motion.span>
               ))}
             </motion.div>
