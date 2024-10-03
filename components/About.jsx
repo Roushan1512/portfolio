@@ -224,7 +224,7 @@ const About = () => {
             animate={{ x: text ? 0 : 500 }}
             transition={{ delay: 0.25 }}
           >
-            <a href="/docs/RoushanResume.pdf" target="_blank">
+            <a href="/docs/RoushanResumeWord.pdf" target="_blank">
               <motion.span className="relative">
                 <motion.h1
                   className={`${alegreya.className} text-white text-2xl z-20 relative px-3 py-1`}
